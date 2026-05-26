@@ -1,4 +1,4 @@
-# Convolutional Neural Network for High Dimensional Crop Pest Clasification.
+# Title.
 
 ## Methodology and model architecture
 
