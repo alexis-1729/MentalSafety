@@ -1,0 +1,14 @@
+system:
+  path: "data/data.csv"
+
+tokenizer:
+  name_id: "bert-base-uncased"
+  max_length: 128
+
+training:
+  output_dir: "./results"
+  learning_rate: 2e-5
+  batch_size: 16
+  epochs: 3
+  weight_decay: 0.01
+  

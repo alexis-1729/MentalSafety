@@ -1,0 +1,23 @@
+system:
+  path_data: "data/dataset.jsonl"
+
+model:
+  base_model_id: "unsloth/Qwen2.5-7B-Instruct-bnb-4bit"
+  max_seq_length: 2048
+  output_dir: "chekpoint/mentalsafety-llm"
+
+lora:
+  r: 16
+  lora_alpha: 32
+  target_modules: ["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"]
+  lora_alpha: 16
+  lora_dropout: 0
+  bias: "none"
+  gradient_checkpointing: "unsloth"
+
+training:
+  batch_size: 2
+  acumulation_steps: 4
+  max_steps: 60
+  learning_rate: 0.0002
+  optim: "adamw_8bit"
